@@ -1,3 +1,5 @@
+package ds.linkedlist;
+
 import java.awt.*;
 
 public class Linklist {
