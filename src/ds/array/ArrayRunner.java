@@ -1,7 +1,7 @@
 package ds.array;
 import java.util.Arrays;
 import java.util.HashSet;
-public class Program1 {
+public class ArrayRunner {
     public static void sumoftwonumber(int a[],int size_arry,int sum) {
         int l, r;
 
