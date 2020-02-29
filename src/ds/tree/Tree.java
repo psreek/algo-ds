@@ -85,5 +85,47 @@ public class Tree {
         return sum;
 
     }
-    
+
+    int height(Node node)
+
+    {
+        if (node == null)
+        return 0;
+        //
+        else {
+            int left = height(node.left);
+            int right = height(node.right);
+
+            if (left > right)
+                return left + 1;
+            else
+                return right + 1;
+        }
+
+
+    }
+
+    void printLevelOrder(Node node)
+    {
+        int h= height(node);
+        int i;
+        for (i=1;i<=h;i++)
+        {
+            printGivenLevel(node, i);
+        }
+    }
+
+    void printGivenLevel(Node node, int level) {
+        if (node == null)
+            return;
+        if (level == 1)
+            System.out.print(node.data + " ");
+        else if (level > 1)
+        {
+            printGivenLevel(node.left, level-1);
+            printGivenLevel(node.right, level-1);
+        }
+
+    }
+
 }
