@@ -20,7 +20,7 @@ public class RunnerTree {
         node2.left = node4;
         node2.right = node5;
         node3.left= node6;
-        node5.left = node7;
+
 
         Tree tree = new Tree(node1);
 
