@@ -1,5 +1,6 @@
 package ds.tree;
 
+
 public class RunnerTree {
 
     public static void main(String[] args) {
@@ -25,10 +26,10 @@ public class RunnerTree {
         Tree tree = new Tree(node1);
 
 
-       System.out.println(tree.size(tree.root));
+       System.out.println("total no of nodes in BT:"+tree.size(tree.root));
 
 
-        System.out.println(tree.noOfLeavesNodes(tree.root));
+        System.out.println("total no of leafnodes in BT:"+tree.noOfLeafsNodes(tree.root));
         System.out.print("inorder traversals:");
         tree.inOrder(tree.root);
         System.out.println();
@@ -44,7 +45,9 @@ public class RunnerTree {
         System.out.println("Height of  BT:"+tree.height(tree.root));
         System.out.println("Print tree node Level:");
         tree.printLevelOrder(tree.root);
-
+        System.out.println();
+        System.out.println("Print tree node Level using queue:");
+        tree.printLevelOrderQueue(tree.root);
 
 
 

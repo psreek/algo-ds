@@ -1,4 +1,8 @@
+
 package ds.tree;
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 public class Tree {
     public Node root;
@@ -40,18 +44,18 @@ public class Tree {
         if (node == null)
             return 0;
         else
-            return (size(node.left) + size(node.right) + 1);
+            return (size(node.left) + size(node.right) +1);
 
 
     }
 
-    int noOfLeavesNodes(Node node){
+    int noOfLeafsNodes(Node node){
         if (node == null)
         return 0;
         else if (node.left == null && node.right == null)
             return 1;
         else
-            return(noOfLeavesNodes(node.left) + noOfLeavesNodes(node.right));
+            return(noOfLeafsNodes(node.left) + noOfLeafsNodes(node.right));
     }
     int sumOfAllNodes(Node node){
         if (node == null)
@@ -96,7 +100,7 @@ public class Tree {
             int left = height(node.left);
             int right = height(node.right);
 
-            if (left > right)
+            if (left >= right)
                 return left + 1;
             else
                 return right + 1;
@@ -124,6 +128,27 @@ public class Tree {
         {
             printGivenLevel(node.left, level-1);
             printGivenLevel(node.right, level-1);
+        }
+
+    }
+    void printLevelOrderQueue(Node node)
+    {
+        Queue<Node> q = new LinkedList<Node>();
+        q.add(node);
+        while(!q.isEmpty())
+        {
+            Node temp = q.poll();
+            System.out.print(temp.data + " ");
+            if (temp.left != null)
+            {
+                q.add(temp.left);
+            }
+            if (temp.right !=null)
+            {
+                q.add(temp.right);
+            }
+
+
         }
 
     }
