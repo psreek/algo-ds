@@ -2,6 +2,8 @@
 package ds.tree;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
+
 
 
 public class Tree {
@@ -151,6 +153,45 @@ public class Tree {
 
         }
 
+    }
+    void inOrderstack(Node node)
+    {
+        Stack<Node> s = new Stack<Node>();
+        Node curr = node;
+        while(curr!=null || s.size()>0)
+        {
+            while(curr!=null)
+            {
+                s.push(curr);
+                curr = curr.left;
+            }
+            curr= s.pop();
+            System.out.print(curr.data+ " ");
+            curr= curr.right;
+        }
+
+
+    }
+    void rightview(Node node)
+    {
+        Queue<Node> q = new LinkedList<Node>();
+        q.add(node);
+        while(!q.isEmpty()) {
+            int n = q.size();
+            int i;
+            for (i = 1; i <= n; i++) {
+                Node temp = q.poll();
+
+                if (i ==1)
+                    System.out.println(temp.data + " ");
+                if (temp.left != null)
+                    q.add(temp.left);
+                if (temp.right != null)
+                    q.add(temp.right);
+
+
+            }
+        }
     }
 
 }

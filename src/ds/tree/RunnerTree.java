@@ -33,6 +33,9 @@ public class RunnerTree {
         System.out.print("inorder traversals:");
         tree.inOrder(tree.root);
         System.out.println();
+        System.out.print("inorder traversals using stack:");
+        tree.inOrderstack(tree.root);
+        System.out.println();
         System.out.print("preorder traversals:");
         tree.preOrder(tree.root);
         System.out.println();
@@ -48,6 +51,10 @@ public class RunnerTree {
         System.out.println();
         System.out.println("Print tree node Level using queue:");
         tree.printLevelOrderQueue(tree.root);
+        System.out.println("Print right view using queue:");
+        tree.rightview(tree.root);
+
+
 
 
 
