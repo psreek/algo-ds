@@ -23,7 +23,7 @@ public class Order {
     @Override
     public String toString() {
         return "order{" +
-                "id='" + id +
+                "id=" + id +
                 ", time='" + time + '\'' +
                 ", stockname=" + stock_name +
                 ", type = "+type +
